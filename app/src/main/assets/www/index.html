@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Liste des jeux</title>
+<style type="text/css">
+  .titreApplication{
+    color: orange;
+    background-color: red;
+    text-align: center;
+  }
+
+  .listeJeux{
+    padding: 0;
+    text-align: center;
+
+    list-style-type: none;
+  }
+
+  .itemJeux{
+    padding: 0.5rem;
+    margin-bottom: 0.3rem;
+    background-color: purple;
+  }
+
+  .itemJeux:hover{
+    background-color: pink;
+  }
+
+  .lienJeux{
+    color: white;
+    text-decoration: none;
+  }
+
+
+</style>
+<script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script> 
+
+</head>
+<body charset="utf-8">
+Il y a une erreur dans le programme
+  <script type="text/html" id="page-liste-jeux">
+    <h1 class="titreApplication">Liste des jeux</h1>
+    <ul class="listeJeux" id="liste-jeux"></ul>
+    <a href="#ajouter-jeux">Ajouter un jeu</a>
+  </script>
+
+  <script type="text/html" id="page-jeux">
+    <h1 id = "jeux-nom" >{NOM}</h1>
+    <h2 id = "jeux-editeur">{EDITEUR}</h2>
+    <p id = "jeux-type">{TYPE}</p>
+    <a href="#">Retour à la liste</a>
+  </script>
+
+<script type="text/html" id="item-liste-jeux">
+<li class='itemJeux'>
+<a class='lienJeux' href = '#jeux/{ID}'>
+{NOM}
+</a>
+</li>
+</script>
+
+
+<script type="text/html" id="page-ajouter-jeux">
+    <form>
+      <label for="jeux-nom">Nom</label>
+      <input type="text" id="jeux-nom"/><br>
+
+      <label for="jeux-editeur">Editeur</label>
+      <input type="text" id="jeux-editeur"/><br>
+
+      <label for="jeux-type">Type de jeux</label>
+      <textarea id="jeux-type"></textarea><br>
+
+    <input type="submit" value="ajouter"/>  
+    </form> 
+    <a href="#">Retour à la liste</a>
+  </script>
+
+  <script src="donnees/EtagereDAO.js"></script>
+  <script src="vue/AjouterJeuxVue.js"></script>
+  <script src="vue/EtagereVue.js"></script>
+  <script src="vue/ListeEtagereVue.js"></script>
+  <script src="application.js"></script> 
+</body>
+</html>
