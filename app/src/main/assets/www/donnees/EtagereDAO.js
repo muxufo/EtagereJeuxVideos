@@ -15,4 +15,12 @@ var EtagereDAO = function () {
 			}
 		}
 	}
+
+		this.ajouterJeux = function(jeux){
+    			this.liste_jeux[this.liste_jeux.lenght] =
+    				{"id":this.liste_jeux.lenght+1,
+    				"nom":jeux.nom,
+    				"editeur":jeux.editeur,
+    				"type":jeux.type};
+    	}
 }

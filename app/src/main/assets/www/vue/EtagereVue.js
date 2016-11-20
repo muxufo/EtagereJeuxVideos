@@ -1,6 +1,6 @@
 var JeuxVue = function(jeux){
 	this.afficher = function(){
-        var nom  = "Nom : ";
+
 		var htmlEnConstruction = JeuxVue.html
 		.replace("{NOM}", jeux.nom)
 		.replace("{EDITEUR}", jeux.editeur)
