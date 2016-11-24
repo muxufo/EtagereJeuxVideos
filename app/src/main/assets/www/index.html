@@ -37,10 +37,10 @@
 <body charset="utf-8">
 Il y a une erreur dans le programme
   <script type="text/html" id="page-liste-jeux">
-    <h1 class="titreApplication" style="text-align:center;">Liste des jeux</h1>
+    <h1 class="titreApplication" style="opacity:0.75 ;text-align:center;">Liste des jeux</h1>
     <ul class="listeJeux" id="liste-jeux"style="padding:0;">  </ul>
     <div style="text-align:center;">
-    <a  href="#ajouter-jeux">Ajouter un jeu</a>
+    <a  href="#ajouter-jeux"><button type="button" class="btn btn-default">Ajouter un nouveau jeu</button></a>
     </div>
   </script>
 
@@ -50,16 +50,16 @@ Il y a une erreur dans le programme
       <li id = "jeux-editeur"class="list-group-item">{EDITEUR}</li>
       <li id = "jeux-type"class="list-group-item">{TYPE}</li>
     </ul>
-    <a href="#">Retour à la liste</a>
+    <a href="#"><button type="button" class="btn btn-default">Retour à la liste</button></a>
   </script>
 
 <script type="text/html" id="item-liste-jeux">
   <div class="panel panel-default">
     <div class="panel-body" style="text-align:center;">
       <a class='lienJeux' href = '#jeux/{ID}'>
-        {NOM}
+        <button type="button" class="btn btn-info">{NOM}</button>
       </a>
-      <a class="lienJeux" href='#modifier'><button>Modifier</button></a></div>
+      <a class="lienJeux" href='#modifier'><button type="button" class="btn btn-danger">Modifier</button></a></div>
   </div>
 </script>
 
@@ -87,7 +87,7 @@ Il y a une erreur dans le programme
     <div class="form-group">
       <div class="col-sm-offset-1 col-sm-10">
         <button type="submit" class="btn btn-default">Submit</button>
-        <a href="#">Retour à la liste</a>
+        <a href="#"><button type="button" class="btn btn-default">Retour à la liste</button> </a>
       </div>
     </div>
   </form>
