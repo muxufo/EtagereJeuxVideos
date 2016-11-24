@@ -1,11 +1,16 @@
 var AjouterJeuxVue = function () {
+
+
 	this.afficher = function (actionAjouterJeux) {
+
 		$("body").html(AjouterJeuxVue.html);
 
 		$("#formulaire-ajouter").on("submit",$.proxy(this.ajouterJeux,this));
 
 		this.actionAjouterJeux = actionAjouterJeux;
+
 	}
+
 		this.ajouterJeux  = function(){
     		var nom = $("#jeux-nom").val();
     		var editeur = $("#jeux-editeur").val();
